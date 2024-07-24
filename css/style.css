@@ -113,7 +113,11 @@ strong {
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 /* Typography */
@@ -123,30 +127,44 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 h1 {
-    font-size: var(--fs-h1)
+    font-size: var(--fs-h1);
+}
+
+h1 strong::first-letter {
+    color: var(--clr-compl)
 }
 
 h2 {
-    font-size: var(--fs-h2)
+    font-size: var(--fs-h2);
 }
 
 h3 {
-    font-size: var(--fs-h3)
+    font-size: var(--fs-h3);
+}
+
+h3::first-letter {
+    color: var(--clr-compl)
+}
+
+p {
+    font-family: var(--ff-secondary);
 }
 
 .section__title {
-    margin-bottom: .25em;
+    margin-bottom: .3em;
 }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    padding-top: 2rem;
 }
 
 .section__title--intro strong {
-    display: block;
+    display: inline-block;
 }
 
 .section__subtitle {
@@ -254,11 +272,6 @@ header {
     opacity: 0;
 }
 
-
-
-
-
-
 .hamburger {
     display: block;
     position: relative;
@@ -290,7 +303,6 @@ header {
 .hamburger::after {
     bottom: 6px;
 }
-
 
 /*  Intro section  */
 
@@ -336,8 +348,6 @@ header {
     }
 }
 
-
-
 /*  My services section  */
 
 .my-services {
@@ -359,33 +369,34 @@ header {
     display: block;
     width: 2em;
     height: 1px;
-    margin: 0.5em auto 1em;
+    margin: 0.5em auto .5em;
     background: var(--clr-light);
     opacity: 0.25;
 }
 
 .services {
-    margin-bottom: 4em;
-}
-
-.service {
+    margin-bottom: 5rem;
     max-width: 500px;
     margin: 0 auto;
+    column-gap: 1rem;
+    text-align: left;
 }
 
 @media (min-width: 800px) {
     .services {
         display: flex;
-        max-width: 1000px;
+        max-width: 100rem;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .service+.service {
-        margin-left: 2em;
+    .service+ .service {
+        margin-left: 3rem;
+        margin-bottom: 3rem;
     }
 }
 
+/*About Me Section*/
 
 .about-me {
     max-width: 1000px;
