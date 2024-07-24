@@ -4,18 +4,19 @@
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
+/* Custom Properties */
 
 :root {
     --ff-primary: 'Zing Rust Base', 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Glacial Indifference', 'Source Code Pro', monospace;
 
-    --fw-reg: 350;
+    --fw-reg: 250;
     --fw-bold: 800;
 
     --clr-light: #F5F5F5;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #A5E06C;
+    --clr-compl: #FFBD59;
 
     --fs-h1: 3rem;
     --fs-h2: 2.3rem;
@@ -45,9 +46,9 @@
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-h2: 3.7rem;
+        --fs-h3: 1.6rem;
+        --fs-body: 1.2rem;
     }
 }
 
@@ -75,6 +76,15 @@ section {
 img {
     display: block;
     max-width: 100%;
+}
+
+#devalbert {
+    margin-left: 5rem;
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
 }
 
 strong {
@@ -126,7 +136,6 @@ h2 {
 h3 {
     font-size: var(--fs-h3)
 }
-
 
 .section__title {
     margin-bottom: .25em;
@@ -180,9 +189,16 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -webkit-transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    -moz-transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    -ms-transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    -o-transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
 .nav__list {
@@ -208,13 +224,13 @@ header {
 }
 
 .nav-toggle {
-    padding: .5em;
+    padding: 1rem;
     background: transparent;
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 1rem;
+    top: 1rem;
     z-index: 1000;
 }
 
@@ -252,7 +268,7 @@ header {
 .hamburger::before,
 .hamburger::after {
     background: var(--clr-accent);
-    width: 2em;
+    width: 3em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
